@@ -4,13 +4,13 @@ Summary:	Evaluate functions over subsets of their domain with Octave
 Name:		octave-%{octpkg}
 Version:	3.2.1
 Release:	1
-Source0:	http://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
+Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
 License:	GPL-3.0+
 Group:		Sciences/Mathematics
 Url:		https://octave.sourceforge.io/%{octpkg}/
 
 BuildRequires:	octave-devel >= 4.2.0
-BuildRequires:	mpfr-devel
+BuildRequires:	pkgconfig(mpfr)
 
 Requires:	octave(api) = %{octave_api}
 
