@@ -52,6 +52,10 @@ This package is part of community Octave-Forge collection.
 
 %build
 %set_build_flags
+%ifarch %{x86_64}
+export CC=gcc
+export CXX=g++
+%endif
 %octave_pkg_build
 
 %install
