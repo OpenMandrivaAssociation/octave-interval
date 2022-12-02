@@ -7,7 +7,7 @@ Release:	1
 Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
 License:	GPL-3.0+
 Group:		Sciences/Mathematics
-Url:		https://octave.sourceforge.io/%{octpkg}/
+Url:		https://packages.octave.org/%{octpkg}/
 
 BuildRequires:	octave-devel >= 4.2.0
 BuildRequires:	pkgconfig(mpfr)
@@ -30,8 +30,6 @@ proofs, constraint programming, and verified computing.
 The implementation is based on interval boundaries represented by binary64
 numbers and is conforming to IEEE Std 1788-2015, IEEE standard for interval
 arithmetic.
-
-This package is part of community Octave-Forge collection.
 
 %files
 %license COPYING
