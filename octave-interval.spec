@@ -10,6 +10,8 @@ Url:		https://packages.octave.org/interval/
 Source0:	https://downloads.sourceforge.net/octave/interval-%{version}.tar.gz
 
 BuildRequires:  octave-devel >= 4.2.0
+BuildRequires:	gomp-devel
+BuildRequires:	pkgconfig(gmp)
 BuildRequires:	pkgconfig(mpfr)
 
 Requires:	octave(api) = %{octave_api}
