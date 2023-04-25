@@ -1,15 +1,15 @@
 %global octpkg interval
 
 Summary:	Evaluate functions over subsets of their domain with Octave
-Name:		octave-%{octpkg}
+Name:		octave-interval
 Version:	3.2.1
-Release:	1
-Source0:	https://downloads.sourceforge.net/octave/%{octpkg}-%{version}.tar.gz
-License:	GPL-3.0+
+Release:	2
+License:	GPLv3+
 Group:		Sciences/Mathematics
-Url:		https://packages.octave.org/%{octpkg}/
+Url:		https://packages.octave.org/interval/
+Source0:	https://downloads.sourceforge.net/octave/interval-%{version}.tar.gz
 
-BuildRequires:	octave-devel >= 4.2.0
+BuildRequires:  octave-devel >= 4.2.0
 BuildRequires:	pkgconfig(mpfr)
 
 Requires:	octave(api) = %{octave_api}
@@ -34,10 +34,10 @@ arithmetic.
 %files
 %license COPYING
 %doc NEWS
-%dir %{octpkglibdir}
-%{octpkglibdir}/*
 %dir %{octpkgdir}
 %{octpkgdir}/*
+%dir %{octpkglibdir}
+%{octpkglibdir}/*
 %{_metainfodir}/*.metainfo.xml
 
 #---------------------------------------------------------------------------
@@ -45,15 +45,12 @@ arithmetic.
 %prep
 %autosetup -p1 -n %{octpkg}-%{version}
 
-# remove backup files
-#find . -name \*~ -delete
-
 %build
-%set_build_flags
 %ifarch %{x86_64}
 export CC=gcc
 export CXX=g++
 %endif
+%set_build_flags
 %octave_pkg_build
 
 %install
