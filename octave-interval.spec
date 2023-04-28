@@ -48,10 +48,8 @@ arithmetic.
 %autosetup -p1 -n %{octpkg}-%{version}
 
 %build
-%ifarch %{x86_64}
 export CC=gcc
 export CXX=g++
-%endif
 %set_build_flags
 %octave_pkg_build
 
