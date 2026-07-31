@@ -2,8 +2,8 @@
 
 Summary:	Evaluate functions over subsets of their domain with Octave
 Name:		octave-interval
-Version:	3.2.1
-Release:	4
+Version:	3.2.2
+Release:	1
 License:	GPLv3+
 Group:		Sciences/Mathematics
 Url:		https://packages.octave.org/interval/
@@ -45,7 +45,7 @@ arithmetic.
 #---------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n %{octpkg}-%{version}
+%autosetup -p1 -n interval-3.2.2
 
 %build
 %set_build_flags
